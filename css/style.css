@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Lobster|Marck+Script|Pacifico|Pattaya&display=swap');
+body{
+	margin: 0;
+	padding: 0;
+}
+header{
+	width: 100%;
+	height: 100vh;
+	background: url('https://cdn.pixabay.com/photo/2018/08/25/15/17/break-3630300_1280.jpg') bottom/cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+nav{
+	position: fixed;
+	top: 40%;
+	left: 85%;
+	z-index: 99;
+}
+nav ul{
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	color: rgba(255, 255, 255, .7);
+}
+nav li{
+	display: inline-flex;
+	margin: 15px 0;
+	padding: 0 10px;
+	cursor: pointer;
+}
+nav ul li span{
+	opacity: 0;
+	transition: all ease 1s;
+}
+.menuCircle{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, .7);
+	margin: 0 15px;
+}
+.menuCircle:hover{
+	background-color: rgb(255,255,255);
+	transition: all ease 1s;
+}
+.logo{
+	display: none;
+}
+.logo img{
+	width: 500px;
+	height: auto;
+}
+.block{
+	width: 90%;
+	height: 40vh;
+	padding: 0 5%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: aliceblue;
+}
+.block img{
+	width: 250px;
+/*	height: 150px;*/
+}
+.block h1{
+	font-size: 40px;
+}
+.bean-block{
+	background-color: rgb(255, 230, 153);
+}
+.cup-block{
+	background-color: rgb(230, 172, 0);
+}
+/*Вся страница меню*/
+#menuPage{
+	width: 100%;
+	background-color: rgb(0, 85, 128);
+	color: aliceblue;
+	padding: 1% 0;
+}
+.list img{
+	width: 450px;
+}
+.list{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+	margin: 1% 0;
+	padding: 0 5%;
+}
+.list:nth-child(even){
+	flex-direction: row-reverse;
+}
+.showLightbox h1{
+	font-size: 60px;
+	font-family: 'Pattaya', sans-serif;
+	margin-bottom: 20px;
+	text-align: center;
+}
+/*вызвать лайтбокс*/
+.open_modal{
+	display: none;
+	cursor: pointer;
+}
+.open_modal h2{
+	padding: 10px 15px;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, .2);
+	color: #fff;
+	text-align: center;
+	margin: 0;
+}
+.showLightbox{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+/*Внутри лайтбокса с меню*/
+.overlay-popup{
+	width: 100%;
+	height: 200vh;
+	display: none;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(255, 255, 255, 0.2);
+	
+}
+.wrappedMenu{
+	background-color: rgb(0,0,0);
+	width: 70%;
+	height: 80vh;
+	display: none;
+	z-index: 1000;
+	position: fixed;
+	top: 15%;
+	left: 15%;
+	right: 10%;
+	bottom: 10%;
+	border: 15px solid #3d1b09;
+}
+.innerMenu{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.fa-times{
+	position: absolute;
+	top: -40px;
+	right: -10%;
+	font-size: 20px;
+	color: #000;
+}
+.innerMenuLogo img{
+	width: 100px;
+}
+.innerMenuContent{
+	width: 90%;
+	font-family: 'Lobster', cursive;
+}
+.innerMenuContent div {
+	padding: 0 20px;
+	margin: 10px 0 0 0;
+}
+.foodName{
+	border-bottom: 1px dashed #fff;
+	font-size: 18px;
+	margin: 5px 0 0 0;
+	position: relative;
+}
+.foodName span{
+	margin-right: 0px;
+	position: absolute;
+	right: 0;
+}
+.discleimer{
+	margin: 0 0 0 5px;
+}
+
+/*КОНТАКТЫ*/
+.contacts {
+	width: 100%;
+	background-color:  rgb(102, 77, 0);
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+.map{
+	width: 50px;
+	height: 50px;
+	border-radius: 4px;
+	background: url('https://img2.freepng.ru/20180407/lkw/kisspng-cardinal-direction-computer-icons-google-maps-nort-direction-5ac87a69443b18.0224604015230879772795.jpg') center/cover;
+	cursor: pointer;
+}
+
+.innermap{
+	width: 70%;
+	height: 70vh;
+	background-color: #fff;
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	top: 15%;
+	left: 15%;
+}
+iframe{
+	width: 100%;
+	height: 100%;
+}
+.fa-times-circle{
+	position: absolute;
+	top: -40px;
+	right: -10%;
+	font-size: 20px;
+	color:rgb(0, 85, 128);
+}
+/*карусель*/
+.slider{
+	width: 100%;
+	height: 100vh;
+}
+ .owl-carousel img{
+	width: 100%;
+	height: 100vh;
+}
+/*Фуутер*/
+footer{
+	width: 100%;
+	height: 20vh;
+	background-color: rgb(0, 85, 128);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	}
+footer h1{
+	font-family: 'Pattaya', sans-serif;
+}
+
+@media screen and (max-width: 992px){
+	nav{
+		left: 80%;
+	}
+	.block{
+		width: 90%;
+	}
+	.block img{
+		width: 230px;
+		height: 150px;
+	}
+	.list img{
+	width: 350px;
+	}
+	.open_modal{
+		display: block;
+	}
+	.innerMenuLogo img{
+	width: 70px;
+	}
+	.contacts {
+		font-size: 14px;
+	}
+	.contacts h2 span{
+		font-weight: 400;
+	}
+	.open_modal h2{	
+		font-size: 20px;
+	}
+}
+@media screen and (max-width: 768px){
+	.logo img{
+		width: 350px;
+	}
+	nav{
+		left: 70%;
+	}
+	.showLightbox h1{
+		font-size: 40px;
+	}
+	
+	.list img{
+	width: 250px;
+	}
+	.list{
+		margin: 40px 0;
+	}
+	.contacts {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.shop-one, .shop-two{
+		margin: 20px 0 10px 40px;
+	}
+	.block img{
+		width: 200px;
+	}
+	.block h1{
+		font-size: 28px;
+	}
+	.innerMenuLogo img{
+	width: 50px;
+	}
+	.foodName{
+		font-size: 18px;
+	}
+	.discleimer{
+		font-size: 14px;
+	}
+	.innerMenuContent div{
+		margin: 5px 0 0 0;
+	}
+	.slider{
+		width: 100%;
+		height: 80vh;
+	}
+ 	.owl-carousel img{
+		width: 100%;
+		height: 80vh;
+	}
+	.wrappedMenu{
+		top: 10%;
+		left: 10%;
+	}
+	.open_modal{
+		display: block;
+	}
+	.open_modal h2{	
+		font-size: 18px;
+	}
+}
+@media screen and (max-width: 576px){
+	.logo img{
+		width: 250px;
+	}
+	nav{
+		display: none;
+	}
+	.block img{
+		width: 100px;
+		height: auto;
+	}
+	.block{
+		height: 20vh;
+	}
+	.foodName{
+		font-size: 16px;
+	}
+	.discleimer{
+		font-size: 12px;
+	}
+	.contacts{
+		justify-content:flex-start;
+		align-items: flex-start
+	}
+	.shop-one{
+		margin-bottom: 40px;
+	}
+	.open_modal h2{	
+		font-size: 14px;
+	}
+}
+
+
+
+
+
+
+
+
+
